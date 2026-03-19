@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var BeaunolVotes = 0
-    @State var VeilleurVotes = 0
-    func incrementBeaunolVotes() {
-        BeaunolVotes += 1
+    @State var CandidateOne = 0
+    @State var CandidateTwo = 0
+    func incrementCandidateOne() {
+        CandidateOne += 1
     }
-    func incrementVeilleurVotes() {
-        VeilleurVotes += 1
+    func incrementCandidateTwo() {
+        CandidateTwo += 1
     }
     
     var body: some View {
@@ -27,27 +27,27 @@ struct ContentView: View {
             HStack {
                 
                 VStack {
-                    Image("Beaunol")
+                    Image("CandidateOne")
                         .resizable()
                         .cornerRadius(20)
                         .aspectRatio(contentMode: .fit)
-                    Button("Beanol") {
-                        incrementBeaunolVotes()                
+                    Button("CandidateOne") {
+                        incrementCandidateOne()
                     }
                         .font(.title)
-                     Text(String(BeaunolVotes))
+                     Text(String(CandidateOne))
                 }
             VStack {
-                Image("Veilleur")
+                Image("CandidateTwo")
                     .resizable()
                     .cornerRadius(20)
                     .aspectRatio(contentMode: .fit)
                 
-                Button("Veilleur") {
-                    incrementVeilleurVotes()
+                Button("CandidateTwo") {
+                    incrementCandidateTwo()
                 }
                     .font(.title)
-                Text(String(VeilleurVotes))
+                Text(String(CandidateTwo))
             }
             
                 
