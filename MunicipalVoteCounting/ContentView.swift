@@ -57,17 +57,6 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        /* VStack {
-                         Image("CandidateOne")
-                         .resizable()
-                         .cornerRadius(20)
-                         .aspectRatio(contentMode: .fit)
-                         Button("CandidateOne") {
-                         incrementCandidateOne()
-                         }
-                         .font(.title)
-                         Text(String(CandidateOne))
-                         } */
                         VStack {
                             Image("CandidateTwo")
                                 .resizable()
