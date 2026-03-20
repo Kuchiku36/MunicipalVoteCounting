@@ -20,44 +20,82 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(alignment: .center) {
+            
+            
             Text("Municipal Vote Counting")
                 .font(.title)
                 .fontWeight(.bold)
-            HStack {
-                
-                VStack {
-                    Image("CandidateOne")
-                        .resizable()
-                        .cornerRadius(20)
-                        .aspectRatio(contentMode: .fit)
-                    Button("CandidateOne") {
-                        incrementCandidateOne()
+            HStack{
+                VStack(alignment: .leading, spacing: 20) {
+                    
+                    HStack {
+                        
+                        VStack {
+                            Image("CandidateOne")
+                                .resizable()
+                                .cornerRadius(15)
+                                .aspectRatio(contentMode: .fit)
+                            Button("CandidateOne") {
+                                incrementCandidateOne()
+                            }
+                            .font(.title)
+                            Text(String(CandidateOne))
+                        }
+                        
                     }
-                        .font(.title)
-                     Text(String(CandidateOne))
+                    .padding()
+                    .background(Rectangle()
+                        .foregroundStyle(.white)
+                        .shadow(radius: 10))
+                    .padding()
                 }
-            VStack {
-                Image("CandidateTwo")
-                    .resizable()
-                    .cornerRadius(20)
-                    .aspectRatio(contentMode: .fit)
                 
-                Button("CandidateTwo") {
-                    incrementCandidateTwo()
+                Spacer()
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    
+                    HStack {
+                        
+                        /* VStack {
+                         Image("CandidateOne")
+                         .resizable()
+                         .cornerRadius(20)
+                         .aspectRatio(contentMode: .fit)
+                         Button("CandidateOne") {
+                         incrementCandidateOne()
+                         }
+                         .font(.title)
+                         Text(String(CandidateOne))
+                         } */
+                        VStack {
+                            Image("CandidateTwo")
+                                .resizable()
+                                .cornerRadius(20)
+                                .aspectRatio(contentMode: .fit)
+                            
+                            Button("CandidateTwo") {
+                                incrementCandidateTwo()
+                            }
+                            .font(.title)
+                            Text(String(CandidateTwo))
+                        }
+                        
+                        
+                    }
+                    .padding()
+                    .background(Rectangle()
+                        .foregroundStyle(.white)
+                        .shadow(radius: 10))
+                    .padding()
+                    
                 }
-                    .font(.title)
-                Text(String(CandidateTwo))
+                
             }
             
-                
-            }
-            .padding()
         }
-        }
-        
+    }
 }
-
 #Preview {
     ContentView()
 }
